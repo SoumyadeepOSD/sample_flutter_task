@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onehub/constants/drawer_constants.dart';
+import 'package:onehub/screens/first_screen.dart';
 import 'package:onehub/screens/second_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -66,7 +67,14 @@ class CustomDrawer extends StatelessWidget {
                                 builder: (context) => const SecondScreen(),
                               ),
                             )
-                          : null;
+                          : drawerItems[index].title == 'Home'
+                              ? Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const FirstScreen(),
+                                  ),
+                                )
+                              : null;
                     },
                     title: Text(
                       drawerItems[index].title,
