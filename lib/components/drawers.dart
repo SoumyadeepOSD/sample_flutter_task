@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onehub/constants/drawer_constants.dart';
 import 'package:onehub/screens/first_screen.dart';
 import 'package:onehub/screens/second_screen.dart';
+import 'package:onehub/screens/third_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key, required this.scaffoldKey});
@@ -64,7 +65,7 @@ class CustomDrawer extends StatelessWidget {
                           ? Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SecondScreen(),
+                                builder: (context) => const ThirdScreen(),
                               ),
                             )
                           : drawerItems[index].title == 'Home'
