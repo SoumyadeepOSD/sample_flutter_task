@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onehub/constants/drawer_constants.dart';
 import 'package:onehub/screens/first_screen.dart';
 import 'package:onehub/screens/second_screen.dart';
+import 'package:onehub/screens/slider_page.dart';
 import 'package:onehub/screens/third_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -107,14 +108,22 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0),
             child: ListTile(
-              title: Text(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SliderPage(),
+                  ),
+                );
+              },
+              title: const Text(
                 "Pixel Support",
                 style: TextStyle(fontSize: 15),
               ),
-              leading: Padding(
+              leading: const Padding(
                 padding: EdgeInsets.only(left: 13.0),
                 child: Icon(
                   Icons.question_mark_outlined,

@@ -31,7 +31,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
           },
           icon: Icon(
             Icons.menu,
-            size: 50,
+            size: 40,
             color: Colors.grey.shade700,
           ),
         ),
@@ -41,8 +41,8 @@ class _ThirdScreenState extends State<ThirdScreen> {
           children: [
             const Image(
               image: AssetImage("src/images/google_logo.png"),
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
             ),
             const SizedBox(width: 20.0),
             Text(
@@ -115,7 +115,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   // Horizontal row
                   // Horizontal row 1
                   Container(
-                    height: 150,
+                    height: 120,
                     width: 330,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -151,7 +151,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   // Horizontal row
                   // Horizontal row 2
                   Container(
-                    height: 150,
+                    height: 120,
                     width: 330,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -198,7 +198,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
             ),
             // Leaderboard
             Positioned(
-              top: 380,
+              top: 350,
               child: Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -216,7 +216,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   ),
                 ),
                 margin: const EdgeInsets.symmetric(horizontal: 50.0),
-                height: 100,
+                height: 80,
                 width: MediaQuery.of(context).size.width - 100,
                 child: Row(
                   children: [
@@ -247,32 +247,72 @@ class _ThirdScreenState extends State<ThirdScreen> {
             ),
             // Challanges
             Positioned(
-              top: 560,
-              left: 50,
-              child: Text(
-                "Challenges",
-                style: GoogleFonts.notoSans(
-                  fontSize: 33,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
+              top: 480,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50),
+                    )),
+                height: MediaQuery.of(context).size.height,
+                child: Positioned(
+                  top: 500,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20.0, horizontal: 50.0),
+                    width: MediaQuery.of(context).size.width,
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Center(
+                            child: Container(
+                              width: 100,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.grey.shade200,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "Challenges",
+                            style: GoogleFonts.notoSans(
+                              fontSize: 33,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
             Positioned(
-              top: 620,
+              top: 580,
               child: Container(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
-                color: const Color(0xF8F9FD),
+                color: Colors.grey.shade100,
                 child: Column(
                   children: [
                     // Challenges 1
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 50.0),
                       child: Stack(
                         children: [
                           const Positioned(
-                            right: 280,
+                            right: 180,
                             child: Chip(
                               backgroundColor: Color(0xFF4285F4),
                               side: BorderSide(color: Colors.white),
@@ -325,8 +365,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                                   Text(
                                     "Test how better you know  Google Pixel 8 Pro 5G.",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -340,11 +381,17 @@ class _ThirdScreenState extends State<ThirdScreen> {
 
                     // Challenges 2
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 15.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 50.0),
                       child: Stack(
                         children: [
                           const Positioned(
-                            right: 450,
+                            right: 350,
                             child: Chip(
                               backgroundColor: Color(0xFF4285F4),
                               side: BorderSide(color: Colors.white),
@@ -388,8 +435,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                                   Text(
                                     "Test how better you know  Google Pixel 8 Pro 5G.",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -402,11 +450,17 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     // Challenges 2
                     // Challenges 3
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 15.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 50.0),
                       child: Stack(
                         children: [
                           const Positioned(
-                            right: 370,
+                            right: 270,
                             child: Chip(
                               backgroundColor: Color(0xFF4285F4),
                               side: BorderSide(color: Colors.white),
@@ -449,8 +503,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                                   Text(
                                     "Search anything with just highlighting or scribble",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -463,11 +518,17 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     // Challenges 3
                     // Challenges 4
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 15.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 50.0),
                       child: Stack(
                         children: [
                           const Positioned(
-                            right: 370,
+                            right: 270,
                             child: Chip(
                               backgroundColor: Color(0xFF4285F4),
                               side: BorderSide(color: Colors.white),
@@ -510,8 +571,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                                   Text(
                                     "Search anything with just highlighting or scribble",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.grey.shade600,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
